@@ -32,8 +32,8 @@ export const HeroSection = () => {
           <p className='text-[#ADB7BE] mb-6 text-base sm:text-lg lg:text-xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices nisi non pretium consequat. Vivamus dignissim euismod ante, in scelerisque leo dapibus vitae. Praesent eu volutpat metus. Praesent ullamcorper semper nibh, et placerat justo scelerisque sit amet. Cras viverra posuere massa eget tempus. In a est at ex iaculis mollis. Curabitur congue justo vulputate est bibendum iaculis. Proin faucibus massa metus, eget bibendum metus porta nec. Quisque sit amet egestas turpis. Sed vitae auctor diam. Integer lacinia rhoncus odio cursus tincidunt. Sed commodo gravida dui, ac imperdiet massa tempor eget. Pellentesque est libero, volutpat in posuere congue, fringilla ac tortor.
           </p>
           <div>
-            <button className='px-6 py-3 w-full rounded-full sm:w-fit mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white'>Hire Me</button>
-            <button className='px-6 py-3 w-full rounded-full sm:w-fit mr-4 bg-transparent hover:bg-slate-800 text-white border border-white'>
+            <button className='px-6 py-3 w-full rounded-full mt-2 sm:w-fit mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white'>Hire Me</button>
+            <button className='px-6 py-3 w-full rounded-full mt-2 sm:w-fit mr-4 bg-transparent hover:bg-slate-800 text-white border border-white'>
               <span>Download CV</span>
             </button>
           </div>
