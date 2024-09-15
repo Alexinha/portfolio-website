@@ -4,13 +4,7 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import MobileMenu from "./MobileMenu";
-import { Space_Mono } from "next/font/google";
-
-const spaceMono = Space_Mono({
-  weight: "400",
-  display: "swap",
-  subsets: ["latin"],
-});
+import theme from "../theme";
 
 const navLinks = [
   {
@@ -35,7 +29,8 @@ const Navbar = () => {
       <div className="flex flex-wrap items-center justify-between mx-auto p-8">
         <Link
           href={"/"}
-          className={`text-xl md:text-2xl text-white ${spaceMono.className}`}
+          className={`text-xl md:text-2xl text-white`}
+          style={{ fontFamily: theme.fonts.signature }}
         >
           Alexina Jingxuan Chang
         </Link>
