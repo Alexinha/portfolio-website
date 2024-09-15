@@ -1,5 +1,7 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import ProjectTag from "./ProjectTag";
 
 const PROJ_DATA = [
   {
@@ -52,27 +54,45 @@ const PROJ_DATA = [
     title: "React Portfolio Website",
     description: "proj 1 description",
     image: "/images/projects/proj-6.jpeg",
-    tag: ["All", "Web"],
+    tag: ["All", "Mobile"],
     gitUrl: "/",
     previewUrl: "/",
   },
 ];
 const ProjectsSection = () => {
+  const [tag, setTag] = useState("All");
+  const handleTagChang = (newTage) => {
+    setTag(newTage);
+  };
+
+  const filteredProjects = PROJ_DATA.filter((proj) => proj.tag.includes(tag));
+
+  console.log(filteredProjects);
+
   return (
     <>
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        <button className="rounded-full border-2 border-purple-500 px-6 py-3 text-xl cursor-pointer">
-          All
-        </button>
-        <button className="rounded-full border-2 border-slate-500 hover:border-white px-6 py-3 text-xl cursor-pointer">
-          Web
-        </button>
+        <ProjectTag
+          onClick={handleTagChang}
+          name="All"
+          isSelected={tag === "All"}
+        />
+        <ProjectTag
+          onClick={handleTagChang}
+          name="Web"
+          isSelected={tag === "Web"}
+        />
+        <ProjectTag
+          onClick={handleTagChang}
+          name="Mobile"
+          isSelected={tag === "Mobile"}
+        />
       </div>
       <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {PROJ_DATA.map((p) => (
+        {filteredProjects.map((p) => (
           <ProjectCard
             key={p.id}
             title={p.title}
