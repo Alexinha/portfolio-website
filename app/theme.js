@@ -6,21 +6,23 @@ const spaceMono = Space_Mono({
   subsets: ["latin"],
 });
 
-const theme = {
+export const themeMain = {
   fonts: {
     signature: spaceMono.style.fontFamily,
   },
-  //   colors: {
-  //     primary: "#6B46C1", // example color
-  //     secondary: "#38B2AC",
-  //     background: "#18191E",
-  //     text: "#FFFFFF",
-  //   },
-  //   spacing: {
-  //     small: "8px",
-  //     medium: "16px",
-  //     large: "24px",
-  //   },
+  colors: {
+    // primary: "#6B46C1", // example color
+    // secondary: "#38B2AC",
+    background: "#121212",
+    borderPrimary: "#33353F",
+    // text: "#FFFFFF",
+  },
 };
 
-export default theme;
+export const textBoxStyle = {
+  borderWidth: "1px",
+  borderColor: themeMain.colors.borderPrimary,
+  backgroundColor: "#18191E",
+  //placeHolderColor: "#9CA2A9",
+  color: "#f3f4f6",
+};

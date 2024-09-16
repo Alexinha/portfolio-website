@@ -16,11 +16,12 @@ export async function POST(req, res) {
       // need to add domain later
       from: fromEmail,
       to: ["alychang0216@gmail.com", email],
-      subject: subject,
+      subject: "Auto-reply: " + subject,
       react: (
         <>
-          <p>{subject}</p>
+          <h4>{`auto-reply: ${subject}`}</h4>
           <p>Thank you for contacting me!</p>
+          <hr></hr>
           <p>New message submitted:</p>
           <p>{message}</p>
         </>
@@ -30,7 +31,6 @@ export async function POST(req, res) {
     if (error) {
       return Response.json({ error }, { status: 500 });
     }
-
     return Response.json({ success: true, data });
   } catch (error) {
     return Response.json({ error }, { status: 500 });

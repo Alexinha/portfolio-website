@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import MobileMenu from "./MobileMenu";
-import theme from "../theme";
+import { themeMain } from "../theme";
 
 const navLinks = [
   {
@@ -25,12 +25,15 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90">
-      <div className="flex flex-wrap items-center justify-between mx-auto p-8">
+    <nav
+      className="fixed top-0 left-0 right-0 z-10"
+      style={{ backgroundColor: themeMain.colors.background, opacity: 0.9 }}
+    >
+      <div className="flex flex-wrap items-center justify-between mx-auto p-10">
         <Link
           href={"/"}
           className={`text-xl md:text-2xl text-white`}
-          style={{ fontFamily: theme.fonts.signature }}
+          style={{ fontFamily: themeMain.fonts.signature }}
         >
           Alexina Jingxuan Chang
         </Link>

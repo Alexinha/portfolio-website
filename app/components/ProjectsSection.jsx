@@ -67,7 +67,7 @@ const ProjectsSection = () => {
 
   const filteredProjects = PROJ_DATA.filter((proj) => proj.tag.includes(tag));
 
-  console.log(filteredProjects);
+  // console.log(filteredProjects);
 
   return (
     <>

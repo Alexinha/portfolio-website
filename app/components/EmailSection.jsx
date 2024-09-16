@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import Link from "next/link";
+import { themeMain, textBoxStyle } from "../theme";
 
 const EmailSection = () => {
   const [sendSuccess, setSendSuccess] = useState(false);
@@ -71,7 +72,8 @@ const EmailSection = () => {
               name="email"
               type="email"
               id="email"
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="text-sm rounded-lg block w-full p-2.5"
+              style={textBoxStyle}
               required
               placeholder="sailormoon@gmail.com"
             ></input>
@@ -87,7 +89,8 @@ const EmailSection = () => {
               name="subject"
               type="text"
               id="subject"
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="text-sm rounded-lg block w-full p-2.5"
+              style={textBoxStyle}
               required
               placeholder="Just saying hi"
             ></input>
@@ -104,7 +107,8 @@ const EmailSection = () => {
               type="text"
               id="message"
               placeholder="Let's talk about ..."
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="text-sm rounded-lg block w-full p-2.5"
+              style={textBoxStyle}
             ></textarea>
           </div>
           <button
@@ -114,9 +118,11 @@ const EmailSection = () => {
             Send Message
           </button>
           <div className="mt-2">
-            {sendSuccess === true ? (
-              <p className="text-green-400">Message Sent Successfully!</p>
-            ) : null}
+            {sendSuccess === true && (
+              <p className="text-green-400 text-sm">
+                Message Sent Successfully!
+              </p>
+            )}
           </div>
         </form>
       </div>
