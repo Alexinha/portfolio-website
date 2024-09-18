@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import { themeMain } from "../theme";
 
 export const HeroSection = () => {
   return (
@@ -31,7 +32,10 @@ export const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] mb-6 text-base sm:text-lg lg:text-xl">
+          <p
+            className="mb-6 text-base sm:text-lg lg:text-xl"
+            style={{ color: themeMain.colors.textSecondary }}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             ultrices nisi non pretium consequat. Vivamus dignissim euismod ante,
             in scelerisque leo dapibus vitae. Praesent eu volutpat metus.
@@ -46,10 +50,12 @@ export const HeroSection = () => {
           </p>
           <div>
             <button className="px-6 py-3 w-full rounded-full mt-2 sm:w-fit mr-4 bg-gradient-to-br from-primary-400 via-primary-500 to-primary-600 text-white hover:text-warmGray-400">
-              Hire Me
+              <a href="#contact">Hire Me</a>
             </button>
             <button className="px-6 py-3 w-full rounded-full mt-2 sm:w-fit mr-4 bg-transparent text-white border border-white hover:border-primary-100 hover:text-primary-400">
-              <span>Download CV</span>
+              <a href="/resume/Jingxuan_Chang_resume.pdf" download>
+                Download CV
+              </a>
             </button>
           </div>
         </div>

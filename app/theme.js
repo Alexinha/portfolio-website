@@ -15,6 +15,7 @@ export const themeMain = {
     // secondary: "#38B2AC",
     background: "#121212",
     borderPrimary: "#33353F",
+    textSecondary: "#ADB7BE",
     // text: "#FFFFFF",
   },
 };

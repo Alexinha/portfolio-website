@@ -47,17 +47,39 @@ const EmailSection = () => {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">Let's connect!</h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
-          I'm happy to connect. Send me an email!
+        <h5 className="text-2xl font-bold text-white my-2">Let's connect!</h5>
+        <p
+          className="mb-4 max-w-md"
+          style={{ color: themeMain.colors.textSecondary }}
+        >
+          Free free to send me an email or leave a message!
         </p>
+        {/* Contact Information */}
+        <div className="contact-info mb-4">
+          <p style={{ color: themeMain.colors.textSecondary }}>
+            email:{" "}
+            <a
+              href="mailto:your-email@example.com"
+              className="text-primary-400 hover:underline"
+            >
+              alychang0216@gmail.com
+            </a>
+          </p>
+          <p style={{ color: themeMain.colors.textSecondary }}>
+            phone:{" "}
+            <a
+              href="tel:+13435586202"
+              className="text-primary-400 hover:underline"
+            >
+              +1 (343) 558-6202
+            </a>
+          </p>
+        </div>
         <div className="socials flex flex-row gap-2">
-          <Link href="/">
-            {/* change link here later  */}
+          <Link href="https://github.com/Alexinha">
             <FaGithub style={{ color: "white", fontSize: "2.5rem" }} />
           </Link>
-          <Link href="/">
-            {/* change link here later  */}
+          <Link href="https://www.linkedin.com/in/jingxuan-alexina-chang-497674262/">
             <FaLinkedin style={{ color: "white", fontSize: "2.5rem" }} />
           </Link>
         </div>
