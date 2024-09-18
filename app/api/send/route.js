@@ -43,6 +43,17 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function POST(req) {
   try {
+    const headers = {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    };
+
+    // Handle preflight request (OPTIONS)
+    if (req.method === "OPTIONS") {
+      return new NextResponse(null, { status: 204, headers });
+    }
+
     const body = await req.json();
     const { email, subject, message } = body;
 
