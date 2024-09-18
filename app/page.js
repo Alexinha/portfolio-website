@@ -19,7 +19,7 @@ export default function Home() {
       style={{ backgroundColor: themeMain.colors.background }}
     >
       <Navbar />
-      <div class="container mt-32 mx-auto px-6 py-4">
+      <div className="container mt-32 mx-auto px-6 py-4">
         <HeroSection />
         <AboutSection />
         <ProjectsSection />

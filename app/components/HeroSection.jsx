@@ -10,7 +10,7 @@ export const HeroSection = () => {
         {/* left side section  */}
         <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
               Hello, I'm{" "}
             </span>
             <br></br>
@@ -45,10 +45,10 @@ export const HeroSection = () => {
             fringilla ac tortor.
           </p>
           <div>
-            <button className="px-6 py-3 w-full rounded-full mt-2 sm:w-fit mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white">
+            <button className="px-6 py-3 w-full rounded-full mt-2 sm:w-fit mr-4 bg-gradient-to-br from-primary-400 via-primary-500 to-primary-600 text-white hover:text-warmGray-400">
               Hire Me
             </button>
-            <button className="px-6 py-3 w-full rounded-full mt-2 sm:w-fit mr-4 bg-transparent hover:bg-slate-800 text-white border border-white">
+            <button className="px-6 py-3 w-full rounded-full mt-2 sm:w-fit mr-4 bg-transparent text-white border border-white hover:border-primary-100 hover:text-primary-400">
               <span>Download CV</span>
             </button>
           </div>

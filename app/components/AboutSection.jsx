@@ -52,10 +52,10 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white">
+    <section className="text-white" id="about">
       <div className="sm:items-center md:items-start md:grid md:grid-cols-2 gap-8 py-8 px-4 xl:gap-16 sm:py-16 xl:py-16">
         <Image
-          src="/images/vaporwave.jpg"
+          src="/images/orange-computer.png"
           width={400}
           height={400}
           className="rounded-lg opacity-100 bg-[#ffffff] md:mt-8"
