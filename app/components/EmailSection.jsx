@@ -97,7 +97,7 @@ const EmailSection = () => {
             </label>
             <input
               name="email"
-              // type="email"
+              type="email"
               id="email"
               className="text-sm rounded-lg block w-full p-2.5"
               style={textBoxStyle}

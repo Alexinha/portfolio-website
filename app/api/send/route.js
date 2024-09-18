@@ -1,38 +1,37 @@
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const fromEmail = process.env.FROM_EMAIL;
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
 
 export async function POST(req) {
-  const body = await req.json().catch((err) => {
-    console.log(err);
-  });
-  // console.log(body);
-  const { email, subject, message } = body;
-
-  // this is the part adding autoreply to all messages sent to me via website
   try {
-    const { data, error } = await resend.emails.send({
-      // need to add domain later
-      from: fromEmail,
-      to: ["alychang0216@gmail.com", email],
-      subject: "Auto-reply: " + subject,
-      react: (
-        <>
-          <h4>{`auto-reply: ${subject}`}</h4>
-          <p>Thank you for contacting me!</p>
-          <hr></hr>
-          <p>New message submitted:</p>
-          <p>{message}</p>
-        </>
-      ),
-    });
+    const body = await req.json();
+    const { email, subject, message } = body;
 
-    if (error) {
-      return Response.json({ error }, { status: 500 });
-    }
-    return Response.json({ success: true, data });
+    const mailOptions = {
+      from: email,
+      to: "alychang0216@gmail.com",
+      subject: `New message from your website: ${subject}`,
+      text: message,
+      html: `<p><strong>From:</strong> ${email}</p>
+             <p><strong>Subject:</strong> ${subject}</p>
+             <p><strong>Message:</strong></p>
+             <p>${message}</p>`,
+    };
+
+    // Send email
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Message sent:", info.messageId);
+    return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
-    return Response.json({ error }, { status: 500 });
+    console.error("Error sending email:", error);
+    return new Response(JSON.stringify({ success: false, error }), {
+      status: 500,
+    });
   }
 }
