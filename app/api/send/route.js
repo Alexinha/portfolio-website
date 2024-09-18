@@ -43,6 +43,9 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function POST(req) {
   try {
+    // this is where vercel stops proventing me from sending email
+    // While using "*" for Access-Control-Allow-Origin is convenient for development, it's not secure for production. In production, you should replace it with the exact domain from which your frontend is making requests
+    // CORS (Cross-Origin Resource Sharing) ensures that a web application hosted on one domain can securely request resources from a server hosted on a different domain. In Next.js (or any Node.js API), CORS needs to be explicitly allowed in your API routes to prevent issues like "CORS policy errors."
     const headers = {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "POST, OPTIONS",
