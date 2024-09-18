@@ -58,7 +58,9 @@ export async function POST(req) {
     };
 
     // Send the email
-    await sgMail.send(msg);
+    await sgMail.send(msg).then(() => {
+      console.log("email sent");
+    });
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
