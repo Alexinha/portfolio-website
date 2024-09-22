@@ -36,17 +36,9 @@ export const HeroSection = () => {
             className="mb-6 text-base sm:text-lg lg:text-xl"
             style={{ color: themeMain.colors.textSecondary }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            ultrices nisi non pretium consequat. Vivamus dignissim euismod ante,
-            in scelerisque leo dapibus vitae. Praesent eu volutpat metus.
-            Praesent ullamcorper semper nibh, et placerat justo scelerisque sit
-            amet. Cras viverra posuere massa eget tempus. In a est at ex iaculis
-            mollis. Curabitur congue justo vulputate est bibendum iaculis. Proin
-            faucibus massa metus, eget bibendum metus porta nec. Quisque sit
-            amet egestas turpis. Sed vitae auctor diam. Integer lacinia rhoncus
-            odio cursus tincidunt. Sed commodo gravida dui, ac imperdiet massa
-            tempor eget. Pellentesque est libero, volutpat in posuere congue,
-            fringilla ac tortor.
+            I&apos;m a full-stack software developer based in Ottawa, Canada.
+            I&apos;m passionate about creating modern, user-friendly
+            applications that deliver value and joy.
           </p>
           <div>
             <button className="px-6 py-3 w-full rounded-full mt-2 sm:w-fit mr-4 bg-gradient-to-br from-primary-400 via-primary-500 to-primary-600 text-white hover:text-warmGray-400">
