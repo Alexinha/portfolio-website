@@ -6,57 +6,63 @@ import ProjectTag from "./ProjectTag";
 const PROJ_DATA = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "proj 1 description",
-    image: "/images/projects/proj-1.jpeg",
+    title: "Software Developer Portfolio Website",
+    description:
+      "React, Next.js, JavaScript. Dynamic website with animation, responsive design, and email sending feature",
+    image: "/images/projects/proj-1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Alexinha/portfolio-website",
+    previewUrl: "https://alexina-portfolio-website.vercel.app/",
   },
   {
     id: 2,
-    title: "React Portfolio Website",
-    description: "proj 1 description",
-    image: "/images/projects/proj-2.jpeg",
+    title: "Artist Exhibition Marketing Website",
+    description:
+      "HTML, CSS, JavaScript. Respinsive website with dynamic navbar, gallery, carousel, and subscription feature.",
+    image: "/images/projects/proj-2.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Alexinha/sailormoon",
+    previewUrl: "https://alexinha-sailormoon.netlify.app/",
   },
   {
     id: 3,
-    title: "React Portfolio Website",
-    description: "proj 1 description",
-    image: "/images/projects/proj-3.jpeg",
+    title: "React Blog",
+    description:
+      "React, JSON Server, JavaScript. A website that renders dynamic content. It allows user to add content and save it to the app.",
+    image: "/images/projects/proj-3.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Alexinha/Blog_React_2023",
+    previewUrl: "",
   },
   {
     id: 4,
-    title: "React Portfolio Website",
-    description: "proj 1 description",
-    image: "/images/projects/proj-4.jpeg",
+    title: "Node.js Weather App",
+    description:
+      "Node.js, Express.js, API Integration, JSON handling. An app that makes API calls based on user input and displays weather forcast accordingly. ",
+    image: "/images/projects/proj-4.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Alexinha/weather-forcast-app",
+    previewUrl: "",
   },
   {
     id: 5,
-    title: "React Portfolio Website",
-    description: "proj 1 description",
-    image: "/images/projects/proj-5.jpeg",
+    title: "Python Traffic Records Manipulator",
+    description:
+      "Python, sqlite3, MVC design pattern. User can save, create, refresh, delete, and search records with database, as well as exporting records into new CSV file.",
+    image: "/images/projects/proj-5.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Alexinha/traffic-record-wizard",
+    previewUrl: "",
   },
   {
     id: 6,
-    title: "React Portfolio Website",
-    description: "proj 1 description",
-    image: "/images/projects/proj-6.jpeg",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "DrumKit Game App",
+    description:
+      "JavaScript App that allows users to make music using tools provided.",
+    image: "/images/projects/proj-6.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Alexinha/DrumKit",
+    previewUrl: "https://alexinha.github.io/DrumKit/",
   },
 ];
 const ProjectsSection = () => {
@@ -91,19 +97,28 @@ const ProjectsSection = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((p) => (
-          <ProjectCard
-            key={p.id}
-            title={p.title}
-            description={p.description}
-            imgUrl={p.image}
-            tags={p.tag}
-            gitUrl={p.gitUrl}
-            previewUrl={p.previewUrl}
-          />
-        ))}
-      </div>
+      {filteredProjects.length !== 0 ? (
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          {filteredProjects.map((p) => (
+            <ProjectCard
+              key={p.id}
+              title={p.title}
+              description={p.description}
+              imgUrl={p.image}
+              tags={p.tag}
+              gitUrl={p.gitUrl}
+              previewUrl={p.previewUrl}
+            />
+          ))}
+        </div>
+      ) : (
+        <div>
+          {" "}
+          <p className="text-white flex justify-center mt-10">
+            Coming soon! &#x2661;
+          </p>
+        </div>
+      )}
     </section>
   );
 };

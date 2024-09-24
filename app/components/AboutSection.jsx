@@ -139,30 +139,30 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base md:text-lg">
-            I’m a full-stack software developer with a strong foundation in both
-            computer programming and the humanities. I have completed my studies
-            in Computer Programming at Algonquin College in September, 2024,
-            where I maintain a GPA of 3.98. Prior to this, I earned a Bachelor’s
-            degree in English Language and Literature from Sun Yat-sen
-            University and studied at the University of Lisbon. This diverse
-            background has given me a unique approach to solving problems and
-            enhancing user experiences.{" "}
+            I&apos;m a full-stack software developer with a strong foundation in
+            both computer programming and the humanities. I have completed my
+            studies in Computer Programming at Algonquin College in September,
+            2024, where I maintain a GPA of 3.98. Prior to this, I earned a
+            Bachelor&apos;s degree in English Language and Literature from Sun
+            Yat-sen University and studied at the University of Lisbon. This
+            diverse background has given me a unique approach to solving
+            problems and enhancing user experiences.{" "}
           </p>
           <br></br>
           <p className="text-base md:text-lg">
-            I’m sociable by nature and tend to be the person who gets everyone
-            working towards a common goal. I have excellent communication skills
-            and know how to collaborate with both teammates and clients, always
-            aiming for mutual success. At Giatec, where I completed my co-op, I
-            applied these skills while contributing to an AI-powered data
-            platform, working across the full stack, implementing security
-            improvements, innovative features, and optimizing performance using
-            Agile methodology. I love building modern, user-friendly
-            applications and am always eager to learn new technologies. I’ve
-            worked with JavaScript, React, Java, Python, and a variety of
-            databases. Whether I’m troubleshooting code or helping a teammate, I
-            thrive on working together to solve problems and create meaningful
-            results.
+            I&apos;m sociable by nature and tend to be the person who gets
+            everyone working towards a common goal. I have excellent
+            communication skills and know how to collaborate with both teammates
+            and clients, always aiming for mutual success. At Giatec, where I
+            completed my co-op, I applied these skills while contributing to an
+            AI-powered data platform, working across the full stack,
+            implementing security improvements, innovative features, and
+            optimizing performance using Agile methodology. I love building
+            modern, user-friendly applications and am always eager to learn new
+            technologies. I&apos;ve worked with JavaScript, React, Java, Python,
+            and a variety of databases. Whether I&apos;m troubleshooting code or
+            helping a teammate, I thrive on working together to solve problems
+            and create meaningful results.
           </p>
           <div className="flex flex-row mt-8">
             <TabButton
