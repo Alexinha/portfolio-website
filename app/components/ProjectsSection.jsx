@@ -26,41 +26,51 @@ const PROJ_DATA = [
   },
   {
     id: 3,
+    title: "Next.js Invoice Management Platform",
+    description:
+      "Next.js, Tailwind, React, CRUD functionality with Postgres database on Vercel, Authentication, Form Validation, and Streaming.",
+    image: "/images/projects/proj-3.png",
+    tag: ["All", "Management Platform"],
+    gitUrl: "https://github.com/Alexinha/invoice_app",
+    previewUrl: "https://invoice-app-nu-seven.vercel.app/",
+  },
+  {
+    id: 4,
     title: "React Blog",
     description:
       "React, JSON Server, JavaScript. A website that renders dynamic content. It allows user to add content and save it to the app.",
-    image: "/images/projects/proj-3.png",
+    image: "/images/projects/proj-4.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Alexinha/Blog_React_2023",
     previewUrl: "",
   },
   {
-    id: 4,
+    id: 5,
     title: "Node.js Weather App",
     description:
       "Node.js, Express.js, API Integration, JSON handling. An app that makes API calls based on user input and displays weather forcast accordingly. ",
-    image: "/images/projects/proj-4.png",
+    image: "/images/projects/proj-5.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Alexinha/weather-forcast-app",
     previewUrl: "",
   },
   {
-    id: 5,
+    id: 6,
     title: "Python Traffic Records Manipulator",
     description:
       "Python, sqlite3, MVC design pattern. User can save, create, refresh, delete, and search records with database, as well as exporting records into new CSV file.",
-    image: "/images/projects/proj-5.png",
-    tag: ["All", "Web"],
+    image: "/images/projects/proj-6.png",
+    tag: ["All", "Management Platform"],
     gitUrl: "https://github.com/Alexinha/traffic-record-wizard",
     previewUrl: "",
   },
   {
-    id: 6,
+    id: 7,
     title: "DrumKit Game App",
     description:
       "JavaScript App that allows users to make music using tools provided.",
-    image: "/images/projects/proj-6.png",
-    tag: ["All", "Web"],
+    image: "/images/projects/proj-7.png",
+    tag: ["All", "Game"],
     gitUrl: "https://github.com/Alexinha/DrumKit",
     previewUrl: "https://alexinha.github.io/DrumKit/",
   },
@@ -93,8 +103,13 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChang}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Management Platform"
+          isSelected={tag === "Management Platform"}
+        />
+        <ProjectTag
+          onClick={handleTagChang}
+          name="Game"
+          isSelected={tag === "Game"}
         />
       </div>
       {filteredProjects.length !== 0 ? (
